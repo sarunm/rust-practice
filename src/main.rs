@@ -5,6 +5,7 @@ fn main() {
     poc_loops();
     wrong_owner();
     immutable_borrowing();
+    mutable_borrowing();
 }
 
 fn wrong_owner() {
@@ -17,6 +18,16 @@ fn immutable_borrowing() {
     let s = String::from("hello");
     let s2 = &s;
     println!("s2 is {}", s2);
+    println!("s is {}", s);
+}
+
+fn mutable_borrowing() {
+    println!("mutable_borrowing");
+    let mut s = String::from("hello");
+    let s2 = &mut s;
+    println!("s2 is {}", s2);
+
+    s2.push_str(", world");
     println!("s is {}", s);
 }
 
