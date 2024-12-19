@@ -17,6 +17,17 @@ fn main() {
     let msg4 = format!("Point: {},{}",x,y);
 
     println!("msg4 is {}", msg4);
+
+
+    let check = 50 ;
+
+    if check > 100 {
+        println!("check is greater than 100");
+    } else if check < 100 {
+        println!("check is less than 100");
+    } else {
+        println!("check is equal to 100");
+    }
 }
 
 
