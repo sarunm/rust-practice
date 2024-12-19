@@ -3,6 +3,21 @@ fn main() {
     poc_if();
     poc_match();
     poc_loops();
+    wrong_owner();
+    immutable_borrowing();
+}
+
+fn wrong_owner() {
+    let s = String::from("hello");
+    let s2 = s;
+    println!("s2 is {}", s2);
+}
+
+fn immutable_borrowing() {
+    let s = String::from("hello");
+    let s2 = &s;
+    println!("s2 is {}", s2);
+    println!("s is {}", s);
 }
 
 fn data_types() {
