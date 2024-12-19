@@ -28,6 +28,15 @@ fn main() {
     } else {
         println!("check is equal to 100");
     }
+
+
+    let test_string = "test1";
+
+    match test_string {
+        "test1" => println!("test1"),
+        "test2" => println!("test2"),
+        _ => println!("default")
+    }
 }
 
 
